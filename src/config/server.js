@@ -9,7 +9,7 @@ server.use(bodyParser.urlencoded({extended : true}));
 server.use(bodyParser.json());
 server.use(allowCors);
 
-server.listen(PORT, ()=> {
+server.listen(process.env.PORT || PORT, ()=> {
     console.log(`BACKEND is running on port ${PORT}.`);
 });
 
